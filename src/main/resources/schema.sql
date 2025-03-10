@@ -6,9 +6,10 @@ CREATE TABLE IF NOT EXISTS members (
     phone_number VARCHAR(15) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE,
     address TEXT,
-    date_joined DATE DEFAULT CURDATE(),
+    date_joined DATE NULL, -- Remove DEFAULT
     status ENUM('active', 'inactive') DEFAULT 'active'
 );
+
 
 -- Create Accounts Table
 CREATE TABLE IF NOT EXISTS accounts (
